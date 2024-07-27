@@ -1,26 +1,52 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background: url(صور/giphy\ \(1\).webp);
     background-size: cover;
     color: #333333; /* لون النص الأساسي */
+    font-family: Arial, sans-serif; /* إضافة خط افتراضي */
 }
 
-#x1 {
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
     background-color: #334f68; /* لون بني محايد */
     color: white;
     border: solid 2px #ffffff; /* لون الحدود الفاتحة */
-    width: 350px;
-    max-width: 90%;
+    display: inline-block;
+    padding: 10px 20px;
     border-radius: 5px;
 }
 
-#x2 {
-    background-color: #17a2b8; /* لون أكوا هادئ */
-    border: solid 2px #dee2e6; /* لون الحدود الفاتحة */
-    width: 350px;
-    border-radius: 8px;    
+main {
+    text-align: center;
+    padding: 20px;
 }
 
-#x3 {
+#x4 {
+    border: solid 2px #dee2e6; /* لون الحدود الفاتحة */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* استخدام دائرة كاملة */
+    object-fit: cover; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    margin-bottom: 20px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
     background-color: #007bff; /* لون أزرق هادئ */
     color: white;
     padding: 15px 32px;
@@ -35,35 +61,47 @@ body {
     border: solid 2px #dee2e6; /* لون الحدود الفاتحة */
 }
 
-#x3:hover {
+a:hover {
     background-color: #0056b3; /* أزرق داكن عند التمرير */
     transform: scale(1.05);
 }
-
-#x4 {
-    border: solid 2px #dee2e6; /* لون الحدود الفاتحة */
-    width: 150px;
-    height: 150px;
-    border-radius: 60%;
-    background-size: cover;
-}
-
-#x31 {
-    background-color: #007bff; /* لون أخضر */
-    color: white;
-    padding: 15px 37px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+#x7{
+    background-color: aqua;
+    border: solid white 2px;
     border-radius: 8px;
-    transition: background-color 0.3s, transform 0.3s;
-    border: solid 2px #dee2e6; /* لون الحدود الفاتحة */
+    width: 300px;
+}
+#x3{
+    width: 150px;
+    max-width: 60%;
+    
+}
+/* إعلامات الوسائط لضبط التصميم على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    #x4 {
+        width: 100px;
+        height: 100px;
+    }
+
+    a {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
 }
 
-#x31:hover {
-    background-color: #0056b3; /* أخضر داكن عند التمرير */
-    transform: scale(1.05);
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+
+    #x4 {
+        width: 80px;
+        height: 80px;
+    }
+
+    a {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
 }
